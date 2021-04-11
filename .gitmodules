@@ -1,0 +1,4 @@
+[submodule "alt-ime-ahk"]
+	path = alt-ime-ahk
+	url = https://github.com/icm7216/alt-ime-ahk.git
+	branch = myhotkey
