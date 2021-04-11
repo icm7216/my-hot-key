@@ -1,4 +1,4 @@
-# my_hot_key
+# my-hot-key
 
 ThinkPad USキーボードのためのAutoHotKeyスクリプトです。
 
