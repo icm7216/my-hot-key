@@ -19,6 +19,12 @@ IMEの ON/OFF は　karakaram氏の[karakaram/alt-ime-ahk](https://github.com/ka
 *  `PgDn` + `Down` 押下で `PgDn`
 
 
+## Installation
+
+```
+git clone --recursive https://github.com/icm7216/my-hot-key.git
+```
+
 
 ## License
 
