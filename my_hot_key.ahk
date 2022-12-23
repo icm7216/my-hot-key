@@ -20,7 +20,7 @@
 
 /*
   カーソル左右移動時に PgUp/PgDown キーを押し間違えてしまうため。
-  VS Code 使用時の PgUp/PgDown キーの操作を変更。
+  VSCode, Excel 使用時の PgUp/PgDown キーの操作を変更。
 
   PgUp + Up で PgUp
   PgUp + Down で PgDn
@@ -28,7 +28,35 @@
   PgDn + Up で PgUp
   PgDn + Down で PgDn
 */
-#IfWinActive,ahk_exe Code.exe
+#IfWinActive, ahk_exe Code.exe
+; PgUp/PgDownキーを無効化
+PgUp::Send {Blind}{vk07}
+PgDn::Send {Blind}{vk07}
+
+; PgUp + Up/Down
+PgUp & Up::Send, {PgUp}        ; PgUp + Up
+PgUp & Down::Send, {PgDn}      ; PgUp + Down
+
+; PgDn + Up/Down
+PgDn & Up::Send, {PgUp}        ; PgDown + Up
+PgDn & Down::Send, {PgDn}      ; PgDown + Down
+#IfWinActive
+
+#IfWinActive, ahk_exe Code - Insiders.exe
+; PgUp/PgDownキーを無効化
+PgUp::Send {Blind}{vk07}
+PgDn::Send {Blind}{vk07}
+
+; PgUp + Up/Down
+PgUp & Up::Send, {PgUp}        ; PgUp + Up
+PgUp & Down::Send, {PgDn}      ; PgUp + Down
+
+; PgDn + Up/Down
+PgDn & Up::Send, {PgUp}        ; PgDown + Up
+PgDn & Down::Send, {PgDn}      ; PgDown + Down
+#IfWinActive
+
+#IfWinActive, ahk_exe EXCEL.EXE
 ; PgUp/PgDownキーを無効化
 PgUp::Send {Blind}{vk07}
 PgDn::Send {Blind}{vk07}
